@@ -1,0 +1,29 @@
+
+### Intellij IDEA ###
+*.iml
+*.ipr
+*.iws
+.idea/**
+.navigation/**
+classes/**
+target/**
+
+### Clojure ###
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/lib/
+/classes/
+/target/
+/checkouts/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.lein-failures
+.nrepl-port
+
+### OSX ###
+*.DS_Store
+.AppleDouble
+.LSOverride
