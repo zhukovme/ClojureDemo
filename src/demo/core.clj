@@ -95,13 +95,13 @@
   [{:keys [title artist year]}]
   (str title " / " artist " / " year))
 
-(defn why
-  [m]
-  (println (map summarize m))
-  ((comp println summarize) {:title "test_test", :artist "test", :year 0})
-  (map #((comp println summarize) %) m)
-  (map #(println (summarize %)) m))
+(defn reduce_by
+  [key_fn f init coll]
+  (reduce (fn [summaries x]
+            (let [k (key_fn x)]
+                  (assoc summaries k (f (summaries k init) x))))
+          {} coll))
 
 (defn -main
   [& args]
-  (why playlist))
+  )
